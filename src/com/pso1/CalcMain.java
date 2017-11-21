@@ -24,12 +24,9 @@ public class CalcMain {
 			System.out.println(e.getMessage());
 
 		}catch(CalcException e) {
-			if(e.getErrCode() == 100) {
 				System.out.print(e.getReason());
-			}else if(e.getErrCode() == 101) {
-				System.out.print(e.getReason());
-			}
 		}
+
 	}
 
 
