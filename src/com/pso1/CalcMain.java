@@ -20,7 +20,7 @@ public class CalcMain {
 			System.out.print("/ by zero");
 		}catch(NumberFormatException e) {
 
-			System.out.println("For input string:");
+			System.out.println(e.getMessage());
 
 		}catch(CalcException e) {
 			if(e.getErrCode() == 100) {
