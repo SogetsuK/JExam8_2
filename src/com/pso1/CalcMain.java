@@ -4,7 +4,8 @@ public class CalcMain {
 
 	public static void main(String[] args){
 		if(args.length == 0) {
-		System.out.println("<数値1> <演算子> <数値2>");
+			System.out.println("<数値1> <演算子> <数値2>");
+			return;
 		}
 		int x = 0, z = 0;
 		String y = null;
@@ -17,16 +18,16 @@ public class CalcMain {
 
 			System.out.print(n);
 		}catch(ArithmeticException e) {
-			System.out.print("/ by zero");
+			System.out.print(e.getMessage());
 		}catch(NumberFormatException e) {
 
 			System.out.println(e.getMessage());
 
 		}catch(CalcException e) {
 			if(e.getErrCode() == 100) {
-				System.out.print("不正な演算子です");
+				System.out.print(e.getReason());
 			}else if(e.getErrCode() == 101) {
-				System.out.print("計算結果が範囲外です");
+				System.out.print(e.getReason());
 			}
 		}
 	}
